@@ -75,8 +75,8 @@ Through this lab, students will gain hands-on experience with:
 
 ### 🧠 Sample Exercises
 
- Exercise 1 — Using Man Pages
-bash
+Exercise 1 — Using Man Pages
+ ```bash
 man ls
 man chmod
 Describe the purpose of each command and list key options.
