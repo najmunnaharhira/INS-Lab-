@@ -95,7 +95,7 @@ Write a short summary of how man helps users in Linux.
 Goal: Explore the Linux file system and understand directory structure.
 
 bash
-Copy code
+
 pwd
 cd /usr/bin
 ls -l
@@ -111,7 +111,7 @@ Note differences between absolute and relative paths.
 Goal: Learn to modify and verify file permissions.
 
 bash
-Copy code
+
 chmod 764 file.txt
 ls -l file.txt
 Task:
@@ -126,7 +126,7 @@ Show the difference before and after running the command.
 Goal: Create and manage symbolic links.
 
 bash
-Copy code
+
 ln -s /etc/init.d/myservice /etc/rc2.d/S98myservice
 ls -l
 Task:
@@ -139,7 +139,7 @@ Explain the difference between hard links and symbolic links.
 Goal: Understand and manipulate environment variables.
 
 bash
-Copy code
+
 echo $HOME
 echo $PATH
 export PATH=/data/course/bin:$PATH
@@ -155,7 +155,7 @@ Document the change and its effect on the system.
 Goal: Learn to redirect outputs and chain commands.
 
 bash
-Copy code
+
 ls -l > output.txt
 cat output.txt | grep ".txt"
 echo "This is a test" >> output.txt
@@ -172,7 +172,7 @@ Demonstrate appending to a file and explain the difference between > and >>.
 Goal: Learn to manage active and background processes.
 
 bash
-Copy code
+
 ps
 top
 sleep 100 &
