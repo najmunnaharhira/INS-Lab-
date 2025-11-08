@@ -1,4 +1,3 @@
-import sys
 import random
 import time
 from collections import Counter
@@ -74,10 +73,16 @@ def initial_map_by_freq(ct: str) -> list[str]:
 # Main solver
 # -----------------------------
 def main():
-    # Read ciphertext (either piped or from a file)
-    ciphertext = sys.stdin.read().strip()
+    # Read ciphertext directly from ciphertext.txt
+    try:
+        with open("ciphertext.txt", "r", encoding="utf-8") as f:
+            ciphertext = f.read().strip()
+    except FileNotFoundError:
+        print("Error: ciphertext.txt not found in the current directory.")
+        return
+
     if not ciphertext:
-        print("Provide ciphertext via stdin or file input.")
+        print("Error: ciphertext.txt is empty.")
         return
 
     ciphertext = normalize(ciphertext)
@@ -107,9 +112,7 @@ def main():
     print(best_plain)
     print("\n===== Mapping (cipher letter -> plain letter) =====")
     for i in range(26):
-        print(f"{chr(ord('a')+i)} -> {best_map[i]}")
+        print(f"{chr(ord('a') + i)} -> {best_map[i]}")
 
 if __name__ == "__main__":
     main()
-
-
