@@ -1,0 +1,14 @@
+# System & sensitive files
+.DS_Store
+*.swp
+*.log
+
+# Do NOT commit local /etc/hosts or any system config from a machine
+/etc/hosts
+
+# Do NOT commit /var/www content that is generated locally
+/var/www/
+
+# Editor configs
+.vscode/
+.idea/
